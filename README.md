@@ -7,15 +7,15 @@ This repository contains exactly three files:
 
 | File | Purpose |
 |---|---|
-| [finetune_q1-q3_final version.ipynb](finetune_q1-q3.ipynb) | Consolidated Q1–Q3 source based on the course notebook, with rank settings, training-loop timing and component selection. |
-| [Q4final version.ipynb](finetune_q4.ipynb) | The completed Q4 notebook with its authentic saved execution outputs and all six figures. |
+| [finetune_q1-q3_final version.ipynb](finetune_q1-q3_final%20version.ipynb) | Consolidated Q1–Q3 source based on the course notebook, with rank settings, training-loop timing and component selection. |
+| [Q4fianl version.ipynb](Q4fianl%20version.ipynb) | The completed Q4 notebook with its authentic saved execution outputs and all six figures. |
 | README.md | Experimental setup, recorded results, observations, provenance and retained source records. |
 
 ## Execution status and provenance
 
 The consolidated Q1–Q3 source has been syntax checked and its component-selection logic checked, but it has not been rerun end to end after integration. The tables below come from earlier actual experiments and a later rank16 timing supplement.
 
-The Q4 notebook is a copy of the student's executed `Q4fianl version.ipynb`, with its filename normalized. Its six embedded plots and saved outputs are preserved. CSV/JSON source contents for Q1–Q3 are included below so separate result files are unnecessary. Original execution notebooks remain in the student's local archive. Source SHA256 values identify the files from which these records were extracted.
+The Q4 notebook is the student's executed `Q4fianl version.ipynb`. Its six embedded plots and saved outputs are preserved. CSV/JSON source contents for Q1–Q3 are included below so separate result files are unnecessary. Original execution notebooks remain in the student's local archive. Source SHA256 values identify the files from which these records were extracted.
 
 ## Experimental setup
 
