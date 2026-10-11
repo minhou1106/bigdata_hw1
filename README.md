@@ -13,7 +13,7 @@ This repository contains exactly three files:
 
 ## Execution status and provenance
 
-The consolidated Q1–Q3 source has been syntax checked and its component-selection logic checked, but it has not been rerun end to end after integration. The tables below come from earlier actual experiments and a later rank16 timing supplement. They are historical results, not newly generated outputs of the consolidated source.
+The consolidated Q1–Q3 source has been syntax checked and its component-selection logic checked, but it has not been rerun end to end after integration. The tables below come from earlier actual experiments and a later rank16 timing supplement.
 
 The Q4 notebook is a copy of the student's executed `Q4fianl version.ipynb`, with its filename normalized. Its six embedded plots and saved outputs are preserved. CSV/JSON source contents for Q1–Q3 are included below so separate result files are unnecessary. Original execution notebooks remain in the student's local archive. Source SHA256 values identify the files from which these records were extracted.
 
@@ -37,8 +37,6 @@ The Q4 notebook is a copy of the student's executed `Q4fianl version.ipynb`, wit
 
 Accuracy increases with rank in these recorded runs. Relative to rank16, rank256 gains 11.6 percentage points on GSM8K and 1.4 on MATH. Greater adapter capacity may help, but single runs do not establish causality or statistical significance. The original MATH run has 956 unparsed answers and rank16 has 542, so performance also reflects output formatting and extraction.
 
-Sources: `benchmark_results_v1.csv` for original/r16, `64 256.csv` for r64/r256.
-
 ## Q2 Training time
 
 | Rank | Training seconds | Training minutes | Trainable parameters |
@@ -51,7 +49,6 @@ Seconds for ranks64/256 convert the recorded durations 1:09:49 and 1:34:17. Rank
 
 Rank64 takes about 5.45 minutes longer than rank16, while rank256 takes about 29.92 minutes longer. Rank256 exceeds rank64 by 24.47 minutes (35.0%). Larger adapters add computation and memory work. Separate sessions limit direct comparisons, and the earlier timing boundaries are not independently verified beyond the retained records.
 
-Sources: `q2_training_times.csv`, `rank16_default_timing.json`, `rank16_default_training_history.csv`, and `64 256.csv`.
 
 ## Q3 Component selection at rank16
 
@@ -68,8 +65,6 @@ Top16 performs best on both tasks. It exceeds Bottom16 by 4.1 percentage points 
 
 Q3 Top16 MATH is 38/1,000 (3.8%), while Q1 rank16 is a separate run with 39/1,000 (3.9%). Both are retained. The recovered Q3 CSV includes reliably saved visible fields and does not claim to recover columns hidden by notebook display truncation.
 
-Sources: `Q3_benchmark_results_recovered.csv` and saved outputs from `q3test.ipynb`.
-
 ## Q4 Original query projection spectra
 
 | Layer | Minimum rank for at least 50% energy |
@@ -84,15 +79,13 @@ Layer0 reaches half the energy with the fewest components, while layer7 needs th
 
 ## Running the source notebooks
 
-Use Kaggle with the intended GPU configuration, enable Internet for downloads, and configure `HF_TOKEN` as a Kaggle secret with model access. Never place the actual token in source or saved outputs. Run cells in order. Core packages are torch, transformers, datasets, accelerate, huggingface_hub, safetensors, numpy, pandas, tqdm and matplotlib. Package versions are not pinned because complete historical versions are unavailable.
+Use Kaggle with the intended GPU configuration, enable Internet for downloads, and configure `HF_TOKEN` as a Kaggle secret with model access. Run cells in order. Core packages are torch, transformers, datasets, accelerate, huggingface_hub, safetensors, numpy, pandas, tqdm and matplotlib. Package versions are not pinned because complete historical versions are unavailable.
 
 The Q1–Q3 full run plan evaluates the original model and runs default ranks16/64/256 plus rank16 selections25%/50%/bottom. A new default rank16 run serves both Q1 and Q3. The full plan is expensive and is not required merely to preserve the historical results listed here. Q4 runs separately without fine-tuning or task evaluation.
 
 The code extends the instructor's assignment notebook structure. Course repository: https://github.com/nycubigdata-2026fall/BigData2026-Assignment1. The course materials identify PiSSA (Meng et al., NeurIPS2024) as the original method and source: https://github.com/MuLabPKU/PiSSA.
 
-## Submission
 
-Use a public repository under the student's own GitHub account. Include its URL in the English report, then export the completed report from Word as an A4 PDF of at most three pages, named `Asg1_315552049.pdf`, and submit it to E3. This package has not been uploaded or submitted by the assistant.
 
 ## Retained source records
 
@@ -560,10 +553,3 @@ rank
 ```
 
 </details>
-
-## Notebook file integrity
-
-| Packaged notebook | SHA256 |
-|---|---|
-| finetune_q1-q3.ipynb | `cd45228727cd307fc9d4d77d86093bda3e83a6c9dcc7d83a666996d1a4f85e73` |
-| finetune_q4.ipynb | `7266e22d42372d67de2275dfd6c56aa8625ababdf2c1769253f905202c428808` |
